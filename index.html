@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">✦</span>
+                <h2>TaskFlow</h2>
+            </div>
+
+            <p class="sidebar-label">MENU</p>
+
+            <nav class="sidebar-nav">
+                <button class="nav-item active">
+                    <span>▦</span> My Tasks
+                </button>
+
+                <button class="nav-item">
+                    <span>◷</span> Overview
+                </button>
+
+                <button class="nav-item">
+                    <span>⚙</span> Settings
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="profile-avatar">R</div>
+                <div>
+                    <strong>My Workspace</strong>
+                    <small>Personal account</small>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <header class="top-header">
+                <div>
+                    <p class="breadcrumb">Workspace / My Tasks</p>
+                    <h1>My Tasks</h1>
+                </div>
+
+                <div class="header-date">
+                    <span>✦</span> Stay productive today
+                </div>
+            </header>
+
+
+            <!-- Welcome section -->
+            <section class="welcome-section">
+                <div>
+                    <p class="welcome-label">YOUR PERSONAL WORKSPACE</p>
+                    <h2>Make today count.</h2>
+                    <p>Small steps lead to big achievements.</p>
+                </div>
+
+                <div class="welcome-decoration">✦</div>
+            </section>
+
+
+            <!-- Statistics -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <span class="stat-icon purple">▤</span>
+                    <p>Total Tasks</p>
+                    <h3 id="totalTasks">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon green">✓</span>
+                    <p>Completed</p>
+                    <h3 id="completedTasks">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon orange">◷</span>
+                    <p>Remaining</p>
+                    <h3 id="remainingTasks">0</h3>
+                </div>
+
+            </section>
+
+
+            <!-- Task management -->
+            <section class="task-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>My Task List</h2>
+                        <p>Manage your daily activities.</p>
+                    </div>
+
+                    <span class="task-count" id="taskCounter">
+                        0 tasks remaining
+                    </span>
+                </div>
+
+
+                <!-- Progress -->
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span>Overall progress</span>
+                        <strong id="completionText">0% completed</strong>
+                    </div>
+
+                    <div class="progress-track">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                </div>
+
+
+                <!-- Add task -->
+                <div class="task-input">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you need to accomplish?"
+                    >
+
+                    <button id="addTaskBtn">
+                        + Add Task
+                    </button>
+                </div>
+
+
+                <!-- Filters -->
+                <div class="task-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        All Tasks
+                    </button>
+
+                    <button class="filter-btn" data-filter="active">
+                        Active
+                    </button>
+
+                    <button class="filter-btn" data-filter="completed">
+                        Completed
+                    </button>
+                </div>
+
+
+                <!-- Task list -->
+                <ul id="taskList" class="task-list">
+                </ul>
+
+            </section>
+
+            <footer class="page-footer">
+                Made with care · TaskFlow
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
